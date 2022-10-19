@@ -2,3 +2,28 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 100px 1fr 70px;
+    height: 100vh;
+}
+
+header{
+    background-color: #2e7d32;
+    color: white;
+}
+
+.buscador{
+    background-color: #DBDDE1;
+}
+
+main{
+    background-color: white;
+}
+
+footer{
+    background-color: #005005;
+    color:white;
+}
