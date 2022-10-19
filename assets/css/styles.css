@@ -13,6 +13,24 @@ body{
 header{
     background-color: #2e7d32;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .brand{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+}
+
+header .brand i{
+    margin: 5px;
+}
+
+.menu{
+    padding: 23px;
 }
 
 .buscador{
