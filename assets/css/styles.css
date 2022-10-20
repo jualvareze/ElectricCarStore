@@ -187,6 +187,11 @@ footer{
         justify-content: start;
         grid-area:header;
     }
+
+    header .brand{
+        font-size: 100%;
+    }
+
     .menu{
         display: flex;
         flex-direction: column;
