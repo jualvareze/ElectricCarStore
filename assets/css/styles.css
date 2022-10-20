@@ -8,6 +8,7 @@ body{
     grid-template-columns: 1fr;
     grid-template-rows: 70px 100px 1fr 70px;
     height: 100vh;
+    grid-template-areas: "header" "buscador" "main" "footer";
 }
 
 header{
@@ -16,6 +17,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    grid-area:header;
 }
 
 header .brand{
@@ -29,8 +31,12 @@ header .brand i{
     margin: 5px;
 }
 
-.menu{
+.menu-barras{
     padding: 23px;
+}
+
+.menu{
+    display: none;
 }
 
 .buscador{
@@ -40,6 +46,7 @@ header .brand i{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    grid-area:buscador;
 }
 
 .buscador select{
@@ -52,9 +59,14 @@ header .brand i{
 
 main{
     background-color: white;
+    grid-area:main;
+}
+
+.cards{
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr;
+    padding: 20px;
 }
 
 .card{
@@ -65,7 +77,7 @@ main{
     border: solid 1px black;
     align-items: center;
     padding: 10px;
-    margin: 10%;
+
 }
 
 .card div img{
@@ -86,6 +98,7 @@ footer{
     background-color: #005005;
     color:white;
     padding: 10px;
+    grid-area:footer;
 }
 
 .icons{
@@ -94,4 +107,88 @@ footer{
 
 .icons i{
     margin:5px;
+}
+
+@media (min-width: 576px){
+
+    body{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 70px 1fr 70px;
+        height: 100vh;
+        grid-template-areas: 
+                "header header"
+                "buscador main"
+                "footer footer"
+        ;
+    }
+
+    .menu-barras{
+        display: none;
+    }
+
+    .menu{
+        display: flex;
+    }
+
+    .opcion{
+        padding: 5px;
+        margin-right: 20px;
+    }
+
+    .buscador{
+        font-size: 100%;
+        justify-content: start;
+        padding: 20px;
+    }
+
+    .buscador select{
+        width: 60%;
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width:992px){
+
+    body{
+        grid-template-columns: 1fr 6fr;
+        grid-template-rows: 70px 1fr 100px;
+        height: 100vh;
+        grid-template-areas: 
+                "header buscador"
+                "header main"
+                "footer main"
+        ;
+    }
+
+    .cards{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .buscador{
+        font-size: 100%;
+        justify-content: start;
+        padding: 5px;
+    }
+
+    .buscador select{
+        width: 95%;
+        border-radius: 4px;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        grid-area:header;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+    }
 }
