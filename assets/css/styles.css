@@ -84,4 +84,13 @@ main{
 footer{
     background-color: #005005;
     color:white;
+    padding: 10px;
+}
+
+.icons{
+    text-align: center;
+}
+
+.icons i{
+    margin:5px;
 }
