@@ -76,7 +76,8 @@ main{
     color: white;
     text-decoration: none;
     background-color: #2e7d32;
-    width: 100px;
+    min-width: 100px;
+    padding: 10px;
     font-size: 25px;
     border-radius: 3px;
 }
