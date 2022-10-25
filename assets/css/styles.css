@@ -60,13 +60,14 @@ header .brand i{
 main{
     background-color: white;
     grid-area:main;
+    padding: 20px;
 }
 
 .cards{
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr;
-    padding: 20px;
+
 }
 
 .card{
@@ -107,6 +108,18 @@ footer{
 
 .icons i{
     margin:5px;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.navegacion p{
+    color: #2e7d32;
+    border: solid 1px rgb(147, 147, 147);
+    padding: 5px;
 }
 
 @media (min-width: 576px){
