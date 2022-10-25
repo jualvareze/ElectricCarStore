@@ -39,6 +39,11 @@ header .brand i{
     display: none;
 }
 
+.opcion:hover{
+    background-color: #005005;
+
+}
+
 .buscador{
     background-color: #DBDDE1;
     font-size: 27px;
@@ -60,14 +65,17 @@ header .brand i{
 main{
     background-color: white;
     grid-area:main;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
+    overflow:hidden
 }
 
 .cards{
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr;
-
+    overflow: auto;
 }
 
 .card{
@@ -104,6 +112,7 @@ footer{
 
 .icons{
     text-align: center;
+    justify-content: center;
 }
 
 .icons i{
@@ -120,6 +129,13 @@ footer{
     color: #2e7d32;
     border: solid 1px rgb(147, 147, 147);
     padding: 5px;
+}
+
+.navegacion p:hover{
+    color: white;
+    border: solid 1px rgb(147, 147, 147);
+    padding: 5px;
+    background-color: #2e7d32;
 }
 
 @media (min-width: 576px){
